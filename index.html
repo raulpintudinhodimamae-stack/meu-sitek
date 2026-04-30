@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Servidor - MTA & Minecraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-zinc-900 text-white font-sans">
+
+    <!-- Navbar -->
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <h1 class="text-2xl font-bold tracking-tighter uppercase italic">Rede <span class="text-blue-500">Carpenters</span></h1>
+        <div class="space-x-6 text-sm font-medium uppercase">
+            <a href="#" class="hover:text-blue-400">Início</a>
+            <a href="#regras" class="hover:text-blue-400">Regras</a>
+            <a href="https://discord.gg/SEU_CONVITE" target="_blank" class="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition">Discord</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-[70vh] flex flex-col justify-center items-center text-center px-4 border-b border-zinc-800">
+        <h2 class="text-6xl font-black mb-4 leading-tight">A MELHOR EXPERIÊNCIA <br> <span class="text-blue-500">MTA & MINECRAFT</span></h2>
+        <p class="text-zinc-400 max-w-xl mb-8">Servidor focado em performance, comunidade limpa e sistemas exclusivos. Entre agora e comece sua jornada.</p>
+        
+        <!-- Botão de IP -->
+        <div class="bg-zinc-800 p-2 rounded-lg border border-zinc-700 flex items-center gap-4">
+            <code id="ip-address" class="px-4 font-mono text-blue-400">meu-servidor.playit.gg</code>
+            <button onclick="copyIP()" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded font-bold transition">
+                <i class="fa-regular fa-copy"></i> COPIAR
+            </button>
+        </div>
+    </header>
+
+    <!-- Seção de Status (Simulada) -->
+    <section class="max-w-4xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-8">
+        <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700">
+            <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-server text-blue-500 mr-2"></i> Servidor MTA</h3>
+            <p class="text-zinc-400 text-sm mb-4">Mapa otimizado e scripts leves para PC fraco.</p>
+            <span class="bg-green-500/10 text-green-500 text-xs font-bold px-2 py-1 rounded">ONLINE</span>
+        </div>
+        <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700">
+            <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-cube text-blue-500 mr-2"></i> Servidor Minecraft</h3>
+            <p class="text-zinc-400 text-sm mb-4">Survival clássico com economia e proteções.</p>
+            <span class="bg-green-500/10 text-green-500 text-xs font-bold px-2 py-1 rounded">ONLINE</span>
+        </div>
+    </section>
+
+    <script>
+        function copyIP() {
+            const ip = document.getElementById('ip-address').innerText;
+            navigator.clipboard.writeText(ip);
+            alert('IP Copiado: ' + ip);
+        }
+    </script>
+</body>
+</html>
